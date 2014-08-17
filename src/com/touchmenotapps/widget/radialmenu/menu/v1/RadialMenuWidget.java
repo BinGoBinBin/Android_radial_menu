@@ -342,10 +342,15 @@ public class RadialMenuWidget extends View {
             if (inCircle) {
                 if (Wedge2Shown) {
                     enabled = null;
-                    animateOuterIn = true;
+                    //重置wedge2的位置
+                    animateOuterIn = false;
+                    animateOuterOut = false;
                 }
+                //重置head文本的显示位置
+                HeaderBoxBounded = false;
                 selected = null;
                 selected2 = null;
+                Wedge2Shown = false;
                 centerCircle.menuActiviated();
 
             } else if (selected != null) {
